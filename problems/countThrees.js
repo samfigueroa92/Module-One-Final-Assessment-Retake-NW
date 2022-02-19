@@ -13,8 +13,17 @@
 * returns: 0
 */
 
-function countThrees() {
+function countThrees(n) {
+    let str = '' + n
+    let strArr = str.split('')
+    let sum = 0;
 
+    for(let i = 0; i < strArr.length; i++){
+        if(strArr[i] === '3'){
+            sum += 1;
+        }
+    }
+return sum;
 }
 
 module.exports = countThrees

@@ -11,8 +11,13 @@
 * returns: 167
 */
 
-function totalNumberOfStudents() {
+function totalNumberOfStudents(arr) {
+    let studentCount = 0;
 
+    for(let i = 0; i < arr.length; i++){
+       studentCount +=  arr[i].studentCount;
+    }
+    return studentCount;
 }
 
 module.exports = totalNumberOfStudents

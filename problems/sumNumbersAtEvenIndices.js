@@ -11,8 +11,25 @@
 * ex: sumNumbersAtEvenIndices([5, 0, 15, 0, 25, 0])
 * returns: 45
 */
-function sumNumbersAtEvenIndices() {
+function sumNumbersAtEvenIndices(arr) {
+    let sum = 0;
 
+    for(let i = 0; i < arr.length; i += 2){
+        sum += arr[i];
+    }
+
+    return sum;
 }
+
+//why did the code below skip an index in only one test?
+// let sum = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr.indexOf(arr[i]) % 2 === 0){
+//             sum += arr[i];
+//         }
+//     }
+//     console.log(arr)
+//     console.log(sum)
+//     return sum;
 
 module.exports = sumNumbersAtEvenIndices

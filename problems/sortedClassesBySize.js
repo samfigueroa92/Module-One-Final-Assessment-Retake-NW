@@ -11,8 +11,16 @@
 * returns: ["B", "C", "A"]
 */
 
-function sortClassesBySize() {
-
+function sortClassesBySize(arr) {
+    //Kalilah's example via Gigi
+    let subject = [];
+  arr.sort((a, b) => a.studentCount - b.studentCount);
+  //a's student count is less than b's studentCount
+  // Sort Mutates as it goes through the array via the loop
+  for (let i = 0; i < arr.length; i++) {
+    subject.push(arr[i].subject);
+  }
+  return subject;
 }
 
 module.exports = sortClassesBySize
